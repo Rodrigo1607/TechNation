@@ -1,7 +1,7 @@
 
-# Teste Técnico TechNation
+# Teste TÃ©cnico TechNation
 
-Teste realizado para demonstração de conhecimento direcionado a front-end.
+Teste realizado para demonstraÃ§Ã£o de conhecimento direcionado a front-end.
 
 
 
@@ -15,9 +15,9 @@ Teste realizado para demonstração de conhecimento direcionado a front-end.
 
 
 
-## Versões das Ferramentas Utilizadas
+## VersÃµes das Ferramentas Utilizadas
 
-| Ferramenta  | Versão      | 
+| Ferramenta  | VersÃ£o      | 
 | :---------- | :--------- |
 | Font Awesome Free | 5.0 | 
 | DataTable Jquery | 1.13.7 | 
@@ -29,36 +29,37 @@ Teste realizado para demonstração de conhecimento direcionado a front-end.
 
 ## Rodando localmente
 
-Realizando o "git clone" do projeto e seguindo para a pasta "views", será possível visualizar as páginas ".chtml", clicando em um dos arquivos será possível acessar a site criado.
+Realizando o "git clone" do projeto e seguindo para a pasta "views", serÃ¡ possÃ­vel visualizar as pÃ¡ginas ".chtml", clicando em um dos arquivos serÃ¡ possÃ­vel acessar a site criado.
 
-
+## Docker
+5c20738e619ed6187865206d7fe155721a2813af7659657512b7fea34c461395
 
 ## Funcionalidades
 
-O sidebar do site contém
+O sidebar do site contÃ©m
 - Dashboard ;
 - Listagem de Notas Emitidas;
 - Criar Notas
 
-### Header na Área de Conteúdo
-O header presenta em cada página de conteúdo contém o nome da área em que o usuário está, juntamente com um exemplo da posição em que a foto de perfil do usuário seguido de seu nome.
+### Header na Ãrea de ConteÃºdo
+O header presenta em cada pÃ¡gina de conteÃºdo contÃ©m o nome da Ã¡rea em que o usuÃ¡rio estÃ¡, juntamente com um exemplo da posiÃ§Ã£o em que a foto de perfil do usuÃ¡rio seguido de seu nome.
 
-### Área Dashboard
-A área "Dashboard" tem por objetivo apresentar de forma sucinta as informações sobre os valores totais das notas fiscais e os gráficos de evolução.
+### Ãrea Dashboard
+A Ã¡rea "Dashboard" tem por objetivo apresentar de forma sucinta as informaÃ§Ãµes sobre os valores totais das notas fiscais e os grÃ¡ficos de evoluÃ§Ã£o.
 
 ---
 
-A tabela que apresentam os valores totais apresentam um link clicavem que não apresenta nenhuma funcionalidade, sendo apresentado apenas como possibilidade de funcionalidade.
+A tabela que apresentam os valores totais apresentam um link clicavem que nÃ£o apresenta nenhuma funcionalidade, sendo apresentado apenas como possibilidade de funcionalidade.
 
 
-### Área Notas Emitidas
-Já a área "Notas Emitidas" contém uma tabela apresentando os dados indivíduais de cada nota fiscal emitida. A tabela utiliza uma lista de objetos json estática de notas emitidas, por conta de não ser utilizado ajax para criação das tabelas.
+### Ãrea Notas Emitidas
+JÃ¡ a Ã¡rea "Notas Emitidas" contÃ©m uma tabela apresentando os dados indivÃ­duais de cada nota fiscal emitida. A tabela utiliza uma lista de objetos json estÃ¡tica de notas emitidas, por conta de nÃ£o ser utilizado ajax para criaÃ§Ã£o das tabelas.
 
 
 
-## Apêndice
+## ApÃªndice
 
-A página criada não realiza nenhuma requisição utilizando ajax, porém a lógica para realizar a funcionalidade juntamente com o JQuery, está no código.
+A pÃ¡gina criada nÃ£o realiza nenhuma requisiÃ§Ã£o utilizando ajax, porÃ©m a lÃ³gica para realizar a funcionalidade juntamente com o JQuery, estÃ¡ no cÃ³digo.
 
 
 
