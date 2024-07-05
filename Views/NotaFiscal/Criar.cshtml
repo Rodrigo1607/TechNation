@@ -1,0 +1,46 @@
+﻿@using TechNation.Enum
+@model NotaFiscal
+<link href="~/css/criar.css" rel="stylesheet" />
+<div class="form-container">
+    <div><h2>Criar Nota Fiscal</h2></div>
+    <form asp-controller="NotaFiscal" asp-action="Criar" method="post">
+        <div class="mb-3">
+            <label for="nomepagador" class="form-label">Nome Pagador</label>
+            <input type="text" asp-for="NomePagador" class="form-control form-custom" placeholder="Digite o Nome">
+        </div>
+        <div class="mb-3">
+            <label for="numeroidentificacao" class="form-label">Numero Identificação</label>
+            <input type="text" asp-for="NumeroIdentificacao" class="form-control form-custom" placeholder="Digite o Numero" >
+        </div>
+        <div class="mb-3">
+            <label for="dataemissao" class="form-label">Data Emissão</label>
+            <input type="date" asp-for="DataEmissao" class="form-control form-custom">
+        </div>
+        <div class="mb-3">
+            <label for="datacobranca" class="form-label">Data Cobrança</label>
+            <input type="date" asp-for="DataCobranca" class="form-control form-custom">
+        </div>
+        <div class="mb-3">
+            <label for="datapagamento" class="form-label">Data Pagamento</label>
+            <input type="date" asp-for="DataPagamento" class="form-control form-custom">
+        </div>
+        <div class="mb-3">
+            <label for="valornota" class="form-label">Valor da Nota</label>
+            <input type="text" asp-for="ValorNota" class="form-control form-custom" placeholder="Digite o Valor">
+        </div>
+        <div class="mb-3">
+            <label for="documentonotafiscal" class="form-label">Documento da Nota</label>
+            <input type="text" asp-for="DocumentoNotaFiscal" class="form-control form-custom" placeholder="Digite o Documento NF">
+        </div>
+        <div class="mb-3">
+            <label for="documentoboletobancario" class="form-label">Documento Boleto</label>
+            <input type="text" asp-for="DocumentoBoletoBancario" class="form-control form-custom" placeholder="Digite o Documento NF">
+        </div>
+        <div class="mb-3">
+            <label for="status" class="form-label">Status</label>
+            <select asp-for="Status" class="form-control form-custom" asp-items="Html.GetEnumSelectList<StatusNota>()"></select>
+        </div>
+        <button type="submit" class="btn btn-primary">Adicionar</button>
+        <a class="btn btn-secondary" asp-controller="NotaFiscal" asp-action="Index" role="button">Voltar</a>
+    </form>
+</div>

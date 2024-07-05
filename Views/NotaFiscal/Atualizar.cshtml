@@ -1,0 +1,67 @@
+﻿@model NotaFiscal
+
+@{
+    ViewData["Title"] = "Editar Nota Fiscal";
+}
+<link href="~/css/atualizar.css" rel="stylesheet" />
+
+<h4>Nota Fiscal</h4>
+<hr />
+<div class="form-container">
+    <form asp-controller="NotaFiscal" asp-action="Atualizar" method="post">
+        <div class="mb-3">
+            <label asp-for="NomePagador" class="form-label">Nome Pagador</label>
+            <input asp-for="NomePagador" class="form-control form-custom" />
+            <span asp-validation-for="NomePagador" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="NumeroIdentificacao" class="form-label">Numero Identificacao</label>
+            <input asp-for="NumeroIdentificacao" class="form-control form-custom" />
+            <span asp-validation-for="NumeroIdentificacao" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="DataEmissao" class="form-label">Data Emissao</label>
+            <input asp-for="DataEmissao" class="form-control form-custom" type="date" />
+            <span asp-validation-for="DataEmissao" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="DataCobranca" class="form-label">Data Cobrança</label>
+            <input asp-for="DataCobranca" class="form-control form-custom" type="date" />
+            <span asp-validation-for="DataCobranca" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="DataPagamento" class="form-label">Data Pagamento</label>
+            <input asp-for="DataPagamento" class="form-control form-custom" type="date" />
+            <span asp-validation-for="DataPagamento" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="ValorNota" class="form-label">Valor Nota</label>
+            <input asp-for="ValorNota" class="form-control form-custom" />
+            <span asp-validation-for="ValorNota" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="DocumentoNotaFiscal" class="form-label">Documento Nota Fiscal</label>
+            <input asp-for="DocumentoNotaFiscal" class="form-control form-custom" />
+            <span asp-validation-for="DocumentoNotaFiscal" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="DocumentoBoletoBancario" class="form-label">Documento Boleto Bancario</label>
+            <input asp-for="DocumentoBoletoBancario" class="form-control form-custom" />
+            <span asp-validation-for="DocumentoBoletoBancario" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Status" class="form-label">Status</label>
+            <select asp-for="Status" class="form-control form-custom">
+                <option value="Emitida">Emitida</option>
+                <option value="CobrancaRealizada">Cobrança Realizada</option>
+                <option value="PagamentoEmAtraso">Pagamento Em Atraso</option>
+                <option value="PagamentoRealizado">Pagamento Realizado</option>
+            </select>
+            <span asp-validation-for="Status" class="text-danger"></span>
+        </div>
+        <div class="btn-container">
+            <input type="submit" value="Salvar" class="btn btn-primary" />
+            <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+        </div>
+    </form>
+</div>

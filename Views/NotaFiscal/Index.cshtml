@@ -1,0 +1,43 @@
+﻿@model IEnumerable<NotaFiscal>
+<link href="~/css/index.css" rel="stylesheet" />
+<h2>Listagem de Notas Fiscais</h2>
+
+<br />
+<div class="text-center">
+    <table id="table-nf" class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome do Pagador</th>
+                <th>Número de Identificação</th>
+                <th>Data de Emissão</th>
+                <th>Data da Cobrança</th>
+                <th>Data do Pagamento</th>
+                <th>Valor da Nota</th>
+                <th>Status</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Id)</td>
+                    <td>@Html.DisplayFor(modelItem => item.NomePagador)</td>
+                    <td>@Html.DisplayFor(modelItem => item.NumeroIdentificacao)</td>
+                    <td>@Html.DisplayFor(modelItem => item.DataEmissao)</td>
+                    <td>@Html.DisplayFor(modelItem => item.DataCobranca)</td>
+                    <td>@Html.DisplayFor(modelItem => item.DataPagamento)</td>
+                    <td>@Html.DisplayFor(modelItem => item.ValorNota)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Status)</td>
+                    <td>
+                        <div class="btn-group" role="group">
+                            <a role="button" class="btn btn-warning btn-sm" asp-controller="NotaFiscal" asp-action="Atualizar" asp-route-id="@item.Id">Editar</a>
+                            <a role="button" class="btn btn-danger btn-sm" asp-controller="NotaFiscal" asp-action="ExcluirConfirmacao" asp-route-id="@item.Id">Excluir</a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

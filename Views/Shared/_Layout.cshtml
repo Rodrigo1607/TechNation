@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - TechNation</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/TechNation.styles.css" asp-append-version="true" />
+    <link href="https://cdn.datatables.net/v/dt/dt-2.0.8/datatables.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <!-- Sidebar -->
+            <div class="bg-danger col-auto col-md-2 min-vh-100">
+                <div class="bg-danger p-2">
+                    <a class="d-flex mb-3 mt-3 text-decoration-none align-items-center">
+                        <span class="fs-4 d-none d-sm-inline text-white">TechNation</span>
+                        <i class="fas fa-pencil-alt ms-3 fa-2x"></i>
+                    </a>
+                    <ul class="nav nav-pills flex-column mt-4">
+                        <li id="item_navbar" class="nav-item">
+                            <a href="~/" class="link-sidebar nav-link" aria-current="page">
+                                <i class="fas fa-house ms-2 fa-2x"></i>
+                                <span class="fs-4 ms-2 d-none d-sm-inline">Página Principal</span>
+                            </a>
+                        </li>
+                        <li id="item_navbar" class="nav-item">
+                            <a href="~/NotaFiscal/Index" class="link-sidebar nav-link">
+                                <i class="fas fa-list ms-2 fa-2x"></i>
+                                <span class="fs-4 ms-2 d-none d-sm-inline">Listagem</span>
+                            </a>
+                        </li>
+                        <li id="item_navbar" class="nav-item">
+                            <a href="~/NotaFiscal/Criar" class="link-sidebar nav-link">
+                                <i class="fas fa-file-invoice ms-2 fa-2x"></i>
+                                <span class="fs-4 ms-2 d-none d-sm-inline">Nova Nota Fiscal</span>
+                            </a>
+                        </li>
+                        <li id="item_navbar" class="nav-item">
+                            <a href="~/NotaFiscal/Dashboard" class="link-sidebar nav-link">
+                                <i class="fas fa-chart-bar ms-2 fa-2x"></i>
+                                <span class="fs-4 ms-2 d-none d-sm-inline">Dashboards</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <div class="p-0 col-md-10 min-vh-100">
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">@ViewData["Title"]</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-user"></i> Rodrigo Castro
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="container mt-3">
+                    <main role="main" class="pb-3">
+                        @RenderBody()
+                    </main>
+                </div>
+
+                <!-- Footer -->
+                @* <footer class="border-top footer text-muted">
+                <div class="container">
+                &copy; 2024 - TechNation
+                </div>
+                </footer> *@
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/v/dt/dt-2.0.8/datatables.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybT8M5L4UOma8p9rN91pLz99IT3zG6zP4p1uZ9RtAX89K6ZJ8" crossorigin="anonymous"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
