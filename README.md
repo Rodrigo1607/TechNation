@@ -32,7 +32,7 @@ Teste realizado para demonstração de conhecimento direcionado a front-end.
 Realizando o "git clone" do projeto e seguindo para a pasta "views", será possível visualizar as páginas ".chtml", clicando em um dos arquivos será possível acessar a site criado.
 
 ## Docker
-5c20738e619ed6187865206d7fe155721a2813af7659657512b7fea34c461395
+9143751e8d2533cb74d8202d602824fced61ba147c824f7079e4c5be62c1e93b
 
 ## Funcionalidades
 
